@@ -19,7 +19,7 @@ var romanToInt = function(s) {
     return;  
   }
   
-  for (let i = 0; i < s.length; i += 1) {
+  for (let i = 0; i < s.length; i++) {
     if (nums[s[i]] < nums[s[i + 1]]) {
       acc -= nums[s[i]];
     } else {
