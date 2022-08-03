@@ -15,6 +15,10 @@ var romanToInt = function(s) {
   
   let acc = 0;
   
+  if (s.length === 0) {
+    return;  
+  }
+  
   for (let i = 0; i < s.length; i += 1) {
     if (nums[s[i]] < nums[s[i + 1]]) {
       acc -= nums[s[i]];
