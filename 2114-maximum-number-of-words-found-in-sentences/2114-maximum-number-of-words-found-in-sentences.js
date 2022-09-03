@@ -3,6 +3,10 @@
  * @return {number}
  */
 var mostWordsFound = function(sentences) {
+  if (sentences.length === 0) {
+    return 0;      
+  }
+  
   let largeNumber = sentences[0].split(" ").length;
 
   for (let i = 1; i < sentences.length; i++) {
