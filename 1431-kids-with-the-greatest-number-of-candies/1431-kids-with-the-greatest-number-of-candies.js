@@ -8,5 +8,5 @@ var kidsWithCandies = function(candies, extraCandies) {
     return Math.max(a, b);
   });
   
-  return candies.map(x => x + extraCandies >= max)     
+  return candies.map(x => x + extraCandies >= max);  
 };
