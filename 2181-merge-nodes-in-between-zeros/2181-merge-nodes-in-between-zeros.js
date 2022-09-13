@@ -11,14 +11,14 @@
  */
 var mergeNodes = function(head) {
   if (!head) return head;
-  if (head.val===0) head = head.next;
+  if (head.val === 0) head = head.next;
   
   let local_head = head;
   let temp = head;
   let sum = 0;
   
-  while(temp != null) {
-    if (temp.val != 0) {
+  while(temp !== null) {
+    if (temp.val !== 0) {
       sum += temp.val;
       temp = temp.next;
     } else {
