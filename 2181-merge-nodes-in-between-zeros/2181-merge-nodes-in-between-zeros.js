@@ -11,26 +11,24 @@
  */
 var mergeNodes = function(head) {
   if (!head) return head;
-
-  let temp = head;
+  if (head.val===0) head = head.next;
   
-  temp = temp.next;
-
-  let before_newHead = new ListNode();
-  let temp2 = before_newHead;
+  let local_head = head;
+  let temp = head;
   let sum = 0;
   
-  while (temp) {
-    if (temp.val === 0) {
-      temp2.next = new ListNode(sum);
-      temp2 = temp2.next;
-      sum = 0;
+  while(temp != null) {
+    if (temp.val != 0) {
+      sum += temp.val;
+      temp = temp.next;
     } else {
-      sum += temp.val;  
+      local_head.val = sum;
+      local_head.next = temp.next;
+      temp = temp.next;
+      local_head = local_head.next;
+      sum = 0;
     }
-
-    temp = temp.next;    
   }
 
-  return before_newHead.next;    
+  return head;
 };
